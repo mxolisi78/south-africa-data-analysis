@@ -7,7 +7,6 @@ Interactive dashboard showing unemployment and education trends.
 
 import streamlit as st
 import pandas as pd
-import sqlite3
 from pathlib import Path
 import plotly.express as px
 import plotly.graph_objects as go
@@ -24,31 +23,34 @@ st.set_page_config(
 st.title("🇿🇦 South Africa - Unemployment & Education Dashboard")
 st.markdown("### World Bank Development Indicators (1991-2023)")
 
-# Connect to database
 @st.cache_data
 def load_data():
-    """Load data from SQLite database."""
+    """Load data from CSV file."""
     # Try different possible paths
     possible_paths = [
-        Path('..') / 'database' / 'south_africa_data.db',
-        Path('database') / 'south_africa_data.db',
-        Path('..') / '..' / 'database' / 'south_africa_data.db',
-        Path('C:/Users/Admin/Documents/SouthAfrica-Data-Analysis/database/south_africa_data.db')
+        Path('data/processed/south_africa_combined.csv'),
+        Path('../data/processed/south_africa_combined.csv'),
+        Path('..') / 'data' / 'processed' / 'south_africa_combined.csv',
+        Path('/mount/src/south-africa-data-analysis/data/processed/south_africa_combined.csv')
     ]
     
-    db_path = None
+    df = None
     for path in possible_paths:
         if path.exists():
-            db_path = path
+            df = pd.read_csv(path)
             break
     
-    if db_path is None:
-        st.error("Database not found. Please check the database path.")
+    if df is None:
+        st.error("Data file not found. Please check the data path.")
         return None
     
-    conn = sqlite3.connect(db_path)
-    df = pd.read_sql_query("SELECT * FROM south_africa_data ORDER BY year", conn)
-    conn.close()
+    # Rename columns to match database format
+    df = df.rename(columns={
+        'Year': 'year',
+        'Unemployment_Rate': 'unemployment_rate',
+        'Tertiary_Enrolment': 'tertiary_enrolment'
+    })
+    
     return df
 
 df = load_data()
@@ -164,7 +166,7 @@ fig3.update_layout(
 )
 st.plotly_chart(fig3, use_container_width=True)
 
-# Scatter plot with manual trendline (no statsmodels needed)
+# Scatter plot with manual trendline
 st.subheader("Relationship: Education vs Unemployment")
 
 # Calculate manual trendline
@@ -217,11 +219,9 @@ st.subheader("Data Table")
 st.dataframe(
     filtered_df,
     column_config={
-        "id": "ID",
         "year": "Year",
         "unemployment_rate": st.column_config.NumberColumn("Unemployment Rate", format="%.2f%%"),
-        "tertiary_enrolment": st.column_config.NumberColumn("Tertiary Enrolment", format="%.2f%%"),
-        "created_at": "Created At"
+        "tertiary_enrolment": st.column_config.NumberColumn("Tertiary Enrolment", format="%.2f%%")
     },
     hide_index=True,
     use_container_width=True
