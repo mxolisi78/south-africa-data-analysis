@@ -1,0 +1,26 @@
+============================================================
+SOUTH AFRICA DATA ANALYSIS - SUMMARY
+============================================================
+
+Generated: 2026-08-28 20:38:57
+
+DATASET OVERVIEW:
+  - Years: 1991 - 2023
+  - Observations: 16
+
+UNEMPLOYMENT RATE:
+  - Mean: 26.87%
+  - Median: 25.84%
+  - Min: 23.07%
+  - Max: 34.01%
+  - Std Dev: 3.62%
+
+TERTIARY ENROLMENT:
+  - Mean: 19.02%
+  - Median: 18.98%
+  - Min: 11.85%
+  - Max: 23.73%
+  - Std Dev: 3.92%
+
+CORRELATION:
+  - Unemployment vs Tertiary Enrolment: 0.831

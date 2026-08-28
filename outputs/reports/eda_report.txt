@@ -1,0 +1,45 @@
+================================================================================
+EXPLORATORY DATA ANALYSIS REPORT
+South Africa - Unemployment and Tertiary Enrolment (1991-2023)
+================================================================================
+
+Report Generated: 2026-08-28 20:46:59
+
+DATA OVERVIEW
+----------------------------------------
+Total Observations: 16
+Year Range: 1991 - 2023
+
+KEY STATISTICS
+----------------------------------------
+
+Unemployment Rate:
+  Mean: 26.87%
+  Median: 25.84%
+  Range: 23.07% - 34.01%
+  Std Dev: 3.62%
+
+Tertiary Enrolment:
+  Mean: 19.02%
+  Median: 18.98%
+  Range: 11.85% - 23.73%
+  Std Dev: 3.92%
+
+KEY INSIGHTS
+----------------------------------------
+1. Strong Positive Correlation: 0.831
+   - As tertiary enrolment increases, unemployment tends to increase
+   - This suggests a complex relationship in the South African context
+
+2. Unemployment Trends:
+   - Generally increasing trend over the period
+   - Significant increase in recent years (2020-2023)
+
+3. Education Trends:
+   - Steady increase in tertiary enrolment
+   - More than doubled from 11.8% (1991) to 23.7% (2021)
+
+4. Policy Implications:
+   - Investment in education may not automatically reduce unemployment
+   - Need for job creation alongside education expansion
+   - Structural issues in the labor market need addressing
