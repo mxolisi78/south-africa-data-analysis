@@ -14,6 +14,7 @@ A professional data science portfolio project
 [![SQLite](https://img.shields.io/badge/SQLite-003B57?style=for-the-badge&logo=sqlite&logoColor=white)](https://www.sqlite.org/)
 [![Pandas](https://img.shields.io/badge/Pandas-2.0+-150458?style=for-the-badge&logo=pandas&logoColor=white)](https://pandas.pydata.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://south-africa-data-analysis.streamlit.app)
 
 </div>
 
@@ -22,6 +23,7 @@ A professional data science portfolio project
 ## 📋 Table of Contents
 
 - [Overview](#-overview)
+- [Live Demo](#-live-demo)
 - [Key Findings](#-key-findings)
 - [Data Sources](#-data-sources)
 - [Methodology](#-methodology)
@@ -49,6 +51,14 @@ This project analyzes the relationship between **unemployment rates** and **tert
 > *"Does higher education automatically lead to lower unemployment?"*
 
 Our findings show a **counterintuitive relationship** in South Africa's context, suggesting structural issues in the labor market that require policy attention.
+
+---
+
+## 🚀 Live Demo
+
+Experience the interactive dashboard live:
+
+**[🔗 View Live Dashboard](https://south-africa-data-analysis.streamlit.app)**
 
 ---
 
@@ -97,7 +107,6 @@ Our findings show a **counterintuitive relationship** in South Africa's context,
 ## ⚙️ Methodology
 
 ### Pipeline Overview
-
 ┌─────────────────┐
 │ World Bank API │
 │ (Data Source) │
@@ -133,6 +142,7 @@ Our findings show a **counterintuitive relationship** in South Africa's context,
 │ (Streamlit) │
 └─────────────────┘
 
+text
 
 ### Analysis Steps
 
@@ -146,7 +156,6 @@ Our findings show a **counterintuitive relationship** in South Africa's context,
 ---
 
 ## 📁 Project Structure
-
 SouthAfrica-Data-Analysis/
 │
 ├── 📊 data/
@@ -192,7 +201,7 @@ SouthAfrica-Data-Analysis/
 ├── 📄 LICENSE # MIT License
 └── 📖 README.md # This file
 
-
+text
 
 ---
 
@@ -206,9 +215,8 @@ SouthAfrica-Data-Analysis/
 ### Step 1: Clone the Repository
 
 ```bash
-git clone https://github.com/yourusername/south-africa-data-analysis.git
+git clone https://github.com/mxolisi78/south-africa-data-analysis.git
 cd south-africa-data-analysis
-
 Step 2: Create Virtual Environment
 bash
 # Windows
@@ -245,7 +253,7 @@ python src/data_cleaning.py && \
 python src/exploratory_analysis.py && \
 python src/statistical_analysis_simple.py && \
 python src/create_database.py
-Launch the Interactive Dashboard
+Launch the Interactive Dashboard Locally
 bash
 streamlit run dashboard/app.py
 Then open your browser to: http://localhost:8501
@@ -258,9 +266,6 @@ sqlite3 database/south_africa_data.db
 SELECT * FROM south_africa_data;
 SELECT AVG(unemployment_rate) FROM south_africa_data;
 .quit
-Generate Visualizations Only
-bash
-python src/exploratory_analysis.py
 🎨 Interactive Dashboard
 The dashboard provides an interactive way to explore the data:
 
@@ -273,9 +278,7 @@ Combined View	Both indicators on one graph
 Scatter Plot	Relationship visualization with correlation
 Data Table	View and interact with raw data
 Download	Export data as CSV
-Dashboard Preview
-The dashboard includes four main sections:
-
+Dashboard Sections
 📊 Key Metrics - Quick stats at a glance
 
 📈 Trend Analysis - Historical trends over time
@@ -389,7 +392,7 @@ Short-term Enhancements
 □ Implement time series forecasting (ARIMA, Prophet)
 □ Add more interactive dashboard features
 Medium-term Goals
-□ Deploy dashboard to Streamlit Cloud
+☑ Deploy dashboard to Streamlit Cloud ✅
 □ Create a REST API for data access
 □ Build a mobile-friendly version
 □ Add machine learning models
@@ -426,7 +429,7 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 text
 MIT License
 
-Copyright (c) 2026 [Your Name]
+Copyright (c) 2026 Mxolisi Maseko
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -437,10 +440,9 @@ furnished to do so, subject to the following conditions:
 ...
 📞 Contact
 <div align="center">
-[Your Name]
-📧 your.email@example.com
+Mxolisi Maseko
+📧 ismailMxolisi78@gmail.com
 🔗 LinkedIn
-🐦 Twitter/X
 💻 GitHub
 🌐 Portfolio
 
@@ -465,65 +467,8 @@ UNESCO. (2024). UNESCO Institute for Statistics. http://uis.unesco.org/
 
 <div align="center">
 ⭐ If you found this project useful, please give it a star!
-</div>
 Built with ❤️ for the data science community
 
 Last Updated: August 2026
 
-text
-
----
-
-## 📝 Instructions to Add This README
-
-### 1. Create/Update README.md
-
-```powershell
-# Open README.md in Notepad
-notepad README.md
-Copy the entire content above and paste it in.
-
-2. Replace placeholders
-Search for and replace:
-
-[Your Name] → Your actual name
-
-[your.email@example.com] → Your email
-
-https://linkedin.com/in/yourprofile → Your LinkedIn URL
-
-https://twitter.com/yourhandle → Your Twitter handle
-
-https://github.com/yourusername → Your GitHub URL
-
-https://yourwebsite.com → Your portfolio URL
-
-3. Add a LICENSE file
-Create LICENSE:
-
-powershell
-notepad LICENSE
-Paste the MIT License:
-
-text
-MIT License
-
-Copyright (c) 2026 [Your Name]
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+</div> ```
